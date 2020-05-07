@@ -1,7 +1,7 @@
-@color-disable: #d4d4d4;
-@bgcolor-disable: #f5f5f5;
-@greyborder: #d9d9d9;
-@bluebg: #1890ff;
+$color-disable: #d4d4d4;
+$bgcolor-disable: #f5f5f5;
+$greyborder: #d9d9d9;
+$bluebg: #1890ff;
 
 .treejs {
   box-sizing: border-box;
@@ -79,18 +79,18 @@
       display: block;
       width: 16px;
       height: 16px;
-      border: 1px solid @greyborder;
+      border: 1px solid $greyborder;
       border-radius: 2px;
     }
     &:hover:before {
-      box-shadow: 0 0 2px 1px @bluebg;
+      box-shadow: 0 0 2px 1px $bluebg;
     }
   }
   .treejs-node__checked {
     & > .treejs-checkbox {
       &:before {
-        background-color: @bluebg;
-        border-color: @bluebg;
+        background-color: $bluebg;
+        border-color: $bluebg;
       }
       &:after {
         position: absolute;
@@ -110,8 +110,8 @@
   .treejs-node__halfchecked {
     & > .treejs-checkbox {
       &:before {
-        background-color: @bluebg;
-        border-color: @bluebg;
+        background-color: $bluebg;
+        border-color: $bluebg;
       }
       &:after {
         position: absolute;
@@ -133,8 +133,8 @@
       cursor: not-allowed;
       &:before {
         cursor: not-allowed;
-        border-color: @greyborder !important;
-        background-color: @bgcolor-disable !important;
+        border-color: $greyborder !important;
+        background-color: $bgcolor-disable !important;
       }
       &:hover:before {
         box-shadow: none !important;
@@ -143,14 +143,14 @@
     .treejs-node__checked {
       & > .treejs-checkbox {
         &:after {
-          border-color: @greyborder;
+          border-color: $greyborder;
         }
       }
     }
     .treejs-node__halfchecked {
       & > .treejs-checkbox {
         &:after {
-          background-color: @greyborder;
+          background-color: $greyborder;
         }
       }
     }
@@ -158,14 +158,14 @@
   .treejs-node__disabled.treejs-node__checked {
     & > .treejs-checkbox {
       &:after {
-        border-color: @greyborder;
+        border-color: $greyborder;
       }
     }
   }
   .treejs-node__disabled.treejs-node__halfchecked {
     & > .treejs-checkbox {
       &:after {
-        background-color: @greyborder;
+        background-color: $greyborder;
       }
     }
   }

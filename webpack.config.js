@@ -2,8 +2,7 @@ const webpack = require('webpack');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
-    .BundleAnalyzerPlugin;
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
     mode: 'none',
@@ -26,7 +25,7 @@ module.exports = {
                 exclude: /node_modules/,
             },
             {
-                test: /\.less$/,
+                test: /\.scss$/,
                 use: [
                     'style-loader',
                     'css-loader',
@@ -39,7 +38,7 @@ module.exports = {
                             ],
                         },
                     },
-                    'less-loader',
+                    'sass-loader',
                 ],
             },
         ],

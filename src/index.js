@@ -1,5 +1,5 @@
 import ajax from './ajax';
-import './index.less';
+import './index.scss';
 
 function deepClone(obj) {
   return JSON.parse(JSON.stringify(obj));
@@ -482,6 +482,7 @@ Tree.createUlEle = function() {
 Tree.createLiEle = function(node, closed) {
   const li = document.createElement('li');
   li.classList.add('treejs-node');
+  li.dataset.id = node.id;
   if (closed) li.classList.add('treejs-node__close');
   if (node.children && node.children.length) {
     const switcher = document.createElement('span');
